@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import Navbar from "./components/NavBar";
 
 function App() {
   return (
     <>
-      <div className="flex w-full" style={{ backgroundColor: "#999999" }}>
+      <div className="flex flex-col min-h-screen">
         <Navbar />
-        <div className="w-full mx-auto py-8 px-4">
+        <div className="flex-grow bg-gray-600">
           <Outlet />
         </div>
       </div>

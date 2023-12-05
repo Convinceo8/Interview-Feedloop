@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { router } from "./routers/router.jsx";
-import { createStore } from 'redux'
-import defaultReducer from './store/reducers/rootReducer'
+import store from "./store";
 import { Provider } from "react-redux";
 import { RouterProvider } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Provider store={createStore(defaultReducer, {})}>
+  <Provider store={store}>
     <RouterProvider router={router} />
   </Provider>
 );
+
